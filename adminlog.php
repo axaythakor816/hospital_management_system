@@ -17,12 +17,6 @@
 <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
 
-
-
-
-
-
-
 </head>
 <body>
 <?php
