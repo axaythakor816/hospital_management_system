@@ -1,8 +1,7 @@
 <?php
-
+require_once('includes/config.php');
 require_once('includes/header.php');
 ?>
-
 	<!-- Home Design -->
 	<div class="ulockd-home-slider">
 		<div class="container-fluid">
@@ -637,12 +636,6 @@ require_once('includes/header.php');
 			</div>
 		</div>
 	</section>
-
-	<!-- Our Blog -->
-	
-
-	<!-- Our Partner -->
-
 
 <?php 
 require_once('includes/footer.php')

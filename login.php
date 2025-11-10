@@ -26,7 +26,7 @@
 </head>
 <body>
 <?php
-   require('config.php');
+  require_once('includes/config.php');
    session_start();
    if(isset($_POST['login']))
    {

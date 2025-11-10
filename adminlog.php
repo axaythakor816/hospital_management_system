@@ -9,18 +9,18 @@
 
 
 <!-- css file -->
-<link rel="stylesheet " href="css/login.css">
+<link rel="stylesheet " href="assets/css/login.css">
 <!-- Title -->
 <title>Karn - Hospital</title>
-<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="assets/css/style2.css">
 
-<link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-<link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
+<link href="assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+<link href="assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
 
 </head>
 <body>
 <?php
-   require('config.php');
+require_once('includes/config.php');
    session_start();
    if(isset($_POST['adminlogin']))
    {
@@ -31,7 +31,7 @@
         ?>
         <script>
             alert('login successfully...');
-            window.location.href='pre clinic/preclinic.dreamstechnologies.com/html/template/index.php';
+            window.location.href='admin/preclinic.dreamstechnologies.com/html/template/index.php';
         </script>";
         <?php
     }else{

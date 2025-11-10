@@ -11,22 +11,18 @@ if(!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+// function filteration($data){
+//     foreach($data as $key => $value){
+//         // 'site_title':
+//         $value=trim($value);
+//         $value=stripslashes($value);
+//         $value=htmlspecialchars($value);
+//         $value=strip_tags($value);
 
-
-function filteration($data){
-    foreach($data as $key => $value){
-        // 'site_title':
-        $value=trim($value);
-        $value=stripslashes($value);
-        $value=htmlspecialchars($value);
-        $value=strip_tags($value);
-
-        $data[$key]=$value;
-    }
-    return $data;
-}
-
-
+//         $data[$key]=$value;
+//     }
+//     return $data;
+// }
 
 function select($sql, $values, $datatypes) {
     $conn = $GLOBALS['conn'];
@@ -102,20 +98,30 @@ function remAlert(){
   document.getElementsByClassName('alert')[0].remove();
 }
 
-  function setActive()
-  {
-    let navbar = document.getElementById('dashboard-menu');
-    let a_tags = navbar.getElementsByTagName('a');
 
-    for(i=0; i<a_tags.length;i++){
-      let file = a_tags[i].href.split('/').pop();
-      let file_name = file.split('.')[0];
+function setActive() {
+  // Get the navbar container (adjust ID if needed)
+  let navbar = document.getElementById('navbar-menu');
+  if (!navbar) return; // Safety check
 
-      if(document.location.href.indexOf(file_name) >= 0)
-      a_tags[i].classList.add('active');
+  // Get all anchor tags inside the navbar
+  let a_tags = navbar.getElementsByTagName('a');
 
+  // Get current page filename (e.g. "page-about2.php")
+  let currentFile = window.location.pathname.split("/").pop();
+
+  for (let i = 0; i < a_tags.length; i++) {
+    let file = a_tags[i].getAttribute("href").split("/").pop();
+
+    // Match the current file name with the link href
+    if (file === currentFile) {
+      a_tags[i].classList.add("active");
+    } else {
+      a_tags[i].classList.remove("active");
     }
   }
-  setActive();
-  
+}
+
+document.addEventListener("DOMContentLoaded", setActive);
+
 </script>

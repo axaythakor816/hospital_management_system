@@ -1,5 +1,5 @@
 <?php
-
+require_once('includes/config.php');
 require_once('includes/header.php');
 ?>
 
@@ -54,8 +54,6 @@ require_once('includes/header.php');
 										</thead>
 										<tbody>
 										<?php
-										 
-										 require('config.php');
 											$query="SELECT * FROM schedule";
 											$data=mysqli_query($conn,$query);
 											$result=mysqli_num_rows($data);

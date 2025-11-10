@@ -1,4 +1,5 @@
 <?php 
+require_once('includes/config.php');
 require_once('includes/header.php')
 ?>
 	<!-- Home Design Inner Pages -->
@@ -115,7 +116,6 @@ require_once('includes/header.php')
 			</div>
 		</div>
 	</section>
-
 
 	<!-- Our Footer -->
 <?php 
