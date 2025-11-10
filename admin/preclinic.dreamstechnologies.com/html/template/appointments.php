@@ -75,45 +75,32 @@ require_once('includes/sidebar.php');
 												<th>Doctor</th>
 												<th>Date</th>
 												<th>Note</th>
-												<th></th>
+												<th colspan="2"></th>
 											</tr>
 										</thead>
 										<tbody>
-											
-											
-												<?php
-												require_once('includes/config.php');
-											$query="SELECT * FROM appointment";
-											$data=mysqli_query($conn,$query);
-											$result=mysqli_num_rows($data);
-											if($result){
-                                                $sr=1;
-
-												while($row=mysqli_fetch_array($data)){
-													?>
                                             <tr>
 												<td>
 													<div class="form-check check-tables">
 														<input class="form-check-input" type="checkbox" value="something">
 													</div>
 												</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
 
-												<td><?php echo $sr; ?></td>
-												<td><?php echo $row['name']; ?></td>
-												<td><?php echo $row['gender']; ?></td>
-												<td><?php echo $row['number']; ?></td>
-												<td><?php echo $row['email']; ?></td>
-												<td><?php echo $row['address']; ?></td>
-												<td><?php echo $row['doctor']; ?></td>
-												<td><?php echo $row['date']; ?></td>
-												<td><?php echo $row['note']; ?></td>
-												
-											
+
 												<td class="text-end">
 													
 														
-														
-															<a class="dropdown-item" href="edit-appointment.php?id=<?php echo $row['id']; ?>"><i class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
+
+												<a class="dropdown-item" href="edit-appointment.php?id=<?php echo $row['id']; ?>"><i class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
                                                             
 													
 												</td>
@@ -121,15 +108,7 @@ require_once('includes/sidebar.php');
                                                 <a class="dropdown-item" onclick="return confirm('Are You sure, you want to delete?')" href="delete-appointment.php?id=<?php echo $row['id']; ?>"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
 															
                                                 </td>
-											</tr>
-											<?php
-                                            $sr++;
-												}	
-											}else{
-                                                echo"No Record Found" ;
-                                            }
-												?>
-											
+											</tr>										
 										</tbody>
 									</table>
 								</div>

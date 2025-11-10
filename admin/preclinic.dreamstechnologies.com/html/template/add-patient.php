@@ -19,40 +19,6 @@ require_once('includes/sidebar.php');
 					</div>
 				</div>
 
-				<?php 
-  
-    
-
-	if(isset($_POST['submit'])){
-		
-
-		$query="INSERT INTO `patient` (`fname`, `lname`, `admit`, `uname`, `number`, `email`, `password`, `dob`, `gender`,`status`,`doctor`, `address`) VALUES ('$_POST[fname]','$_POST[lname]','$_POST[admit]','$_POST[uname]','$_POST[number]','$_POST[email]','$_POST[password]','$_POST[dob]','$_POST[gender]','$_POST[status]','$_POST[doctor]','$_POST[address]')";
-		$data=mysqli_query($conn,$query);
-		if($data){
-			?>
-			<script type="text/javascript">
-				alert("data save successfully");
-                window.open("patients.php","_self");
-			</script>
-
-			<?php
-
-		}
-		else{
-			?>
-			<script type="text/javascript">
-				alert("please try again");
-              
-			</script>
-
-			<?php
-
-			
-		}
-
-	}
-
-	?>
 				<!-- /Page Header -->
 				<div class="row">
 					<div class="col-sm-12">

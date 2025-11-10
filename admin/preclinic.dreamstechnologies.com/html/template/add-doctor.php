@@ -3,39 +3,6 @@ require_once('includes/auth_check.php');
 require_once('includes/header.php');
 require_once('includes/sidebar.php');
 ?> 
-	<?php 
-    // require('config.php');
-
-	// if(isset($_POST['sub'])){
-		
-
-	// 	$query="INSERT INTO `doctor` (`dfname`, `dlname`, `duname`, `dnumber`, `demail`, `dpassword`, `ddob`, `dgender`, `dedu`, `ddepart`, `daddress`) VALUES ('$_POST[dfname]','$_POST[dlname]','$_POST[duname]','$_POST[dnumber]','$_POST[demail]','$_POST[dpassword]','$_POST[ddob]','$_POST[dgender]','$_POST[dedu]','$_POST[ddepart]','$_POST[daddress]')";
-	// 	$data=mysqli_query($conn,$query);
-	// 	if($data){
-	// 		?>
-	// 		<script type="text/javascript">
-	// 			alert("data save successfully");
-	// 			window.open("doctors.php","_self");
-	// 		</script>
-
-	// 		<?php
-
-	// 	}
-	// 	else{
-	// 		?>
-	// 		<script type="text/javascript">
-	// 			alert("please try again");
-	// 		</script>
-
-	// 		<?php
-
-			
-	// 	}
-
-	// }
-
-	?>
-
         <div class="page-wrapper">
             <div class="content">
 			

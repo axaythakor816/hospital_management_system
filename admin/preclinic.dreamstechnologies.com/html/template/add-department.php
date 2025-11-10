@@ -19,40 +19,6 @@ require_once('includes/sidebar.php');
 					</div>
 				</div>
                 
-				<?php 
-    
-    
-
-	if(isset($_POST['submit'])){
-		
-
-		$query="INSERT INTO `department` (`depart`,`head`) VALUES ('$_POST[depart]','$_POST[head]')";
-		$data=mysqli_query($conn,$query);
-		if($data){
-			?>
-			<script type="text/javascript">
-				alert("data save successfully");
-                window.open("departments.php","_self");
-			</script>
-
-			<?php
-
-		}
-		else{
-			?>
-			<script type="text/javascript">
-				alert("please try again");
-              
-			</script>
-
-			<?php
-
-			
-		}
-
-	}
-
-	?>
 				<!-- /Page Header -->
 				<div class="row">
 					<div class="col-sm-12">
